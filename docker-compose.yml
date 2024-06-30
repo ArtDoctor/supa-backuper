@@ -9,3 +9,8 @@ services:
       - SUPA_NAMES=${SUPA_NAMES}
       - BACKUP_FOLDER=${BACKUP_FOLDER}
       - MAX_BACKUPS=${MAX_BACKUPS}
+    volumes:
+      - ./backups:/app/${BACKUP_FOLDER}
+
+volumes:
+  backups:
