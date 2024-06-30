@@ -1,0 +1,11 @@
+services:
+  supa-backuper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - INTERVAL_HOURS=8
+      - SUPA_URLS=${SUPA_URLS}
+      - SUPA_NAMES=${SUPA_NAMES}
+      - BACKUP_FOLDER=${BACKUP_FOLDER}
+      - MAX_BACKUPS=${MAX_BACKUPS}
