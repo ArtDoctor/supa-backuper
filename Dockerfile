@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y postgresql-client
 
 # Copy the Python script into the container
 COPY scheduler.py /app/
+ENV PYTHONUNBUFFERED=1
 
 # Run the Python script
 CMD ["python", "scheduler.py"]
